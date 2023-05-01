@@ -1,11 +1,9 @@
 const TYPING_SPEED = 100;
 
-const target = document.querySelector('#typing-animation-target');
+const targetDiv = document.querySelector('#typing-animation-target');
 const finalText = 'Lorem ipsum dolor sit amet consectetur adipisicing elit.';
 
-target.innerHTML = finalText.substring(0, 1);
-
-const animate = (speed) => {
+const animate = (target, speed) => {
     var currentIndex = 1;
     var typingAnimation = setInterval (() => {
         if(currentIndex > finalText.length) {
@@ -18,4 +16,4 @@ const animate = (speed) => {
     speed)
 }
 
-animate(TYPING_SPEED);
+animate(targetDiv, TYPING_SPEED);
